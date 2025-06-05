@@ -29,6 +29,20 @@
                     ]
                 },
                 {
+                    "name": "HouseIntent",
+                    "slots": [
+                        {
+                            "name": "kidName",
+                            "type": "AMAZON.FirstName",
+                        }
+                    ],
+                    "samples": [
+                        "assign a house to {kidName}",
+                        "put {kidName} into a house",
+                        "assign house to {kidName}"
+                    ]
+                },
+                {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 }
