@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "Panthi's sorting hat",
+            "invocationName": "panthis sorting hat",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",

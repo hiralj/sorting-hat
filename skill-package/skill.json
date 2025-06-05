@@ -5,18 +5,18 @@
         "en-US": {
           "summary": "Panthi's sorting hat",
           "examplePhrases": [
-            "Alexa open Panthi's sorting hat",
-            "Panthi's sorting hat",
+            "alexa open panthis sorting hat",
+            "panthis sorting hat",
             "birthday sorting hat"
           ],
           "name": "sorting-hat",
           "description": "Sample Full Description"
         },
         "en-IN": {
-          "summary": "Panthi's sorting hat",
+          "summary": "panthis sorting hat",
           "examplePhrases": [
-            "Alexa open Panthi's sorting hat",
-            "Panthi's sorting hat",
+            "alexa open panthis sorting hat",
+            "panthis sorting hat",
             "birthday sorting hat"
           ],
           "name": "sorting-hat",
@@ -28,7 +28,11 @@
       "distributionCountries": []
     },
     "apis": {
-      "custom": {}
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:510151262089:function:ask-sorting-hat-default-default-1749126899760"
+        }
+      }
     },
     "manifestVersion": "1.0"
   }
