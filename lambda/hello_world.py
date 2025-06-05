@@ -5,6 +5,8 @@
 # session persistence, api calls, and more.
 # This sample is built using the handler classes approach in skill builder.
 import logging
+import helper
+import random
 
 from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.dispatch_components import AbstractRequestHandler
@@ -59,6 +61,7 @@ class HouseIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("HouseIntent")(handler_input)
 
     def handle(self, handler_input):
+        house = random.choice(helper.houses)
         slots = handler_input.request_envelope.request.intent.slots
         name_slot = slots.get("kidName")
 
@@ -70,7 +73,7 @@ class HouseIntentHandler(AbstractRequestHandler):
         ssml_speech = (
             "<speak>"
             "Hmm... let me think..."
-            f"{kid_name} goes to Gryffindor"
+            f"{kid_name} goes to {house}"
             "</speak>"
         )
 
