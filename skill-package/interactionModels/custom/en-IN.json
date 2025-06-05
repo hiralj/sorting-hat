@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "panthis sorting hat",
+            "invocationName": "birthday sorting game",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
