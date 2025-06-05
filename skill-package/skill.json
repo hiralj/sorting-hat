@@ -1,0 +1,35 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Panthi's sorting hat",
+          "examplePhrases": [
+            "Alexa open Panthi's sorting hat",
+            "Panthi's sorting hat",
+            "birthday sorting hat"
+          ],
+          "name": "sorting-hat",
+          "description": "Sample Full Description"
+        },
+        "en-IN": {
+          "summary": "Panthi's sorting hat",
+          "examplePhrases": [
+            "Alexa open Panthi's sorting hat",
+            "Panthi's sorting hat",
+            "birthday sorting hat"
+          ],
+          "name": "sorting-hat",
+          "description": "Sample Full Description"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {}
+    },
+    "manifestVersion": "1.0"
+  }
+}
