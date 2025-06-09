@@ -31,6 +31,10 @@
                     ]
                 },
                 {
+                    "name": "ThankYouIntent",
+                    "samples": ["thank you", "thanks a lot", "thank you very much"]
+                },
+                {
                     "name": "AMAZON.NavigateHomeIntent",
                     "samples": []
                 }
