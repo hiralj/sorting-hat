@@ -38,6 +38,7 @@
                     ],
                     "samples": [
                         "assign a house to {kidName}",
+                        "assign {kidName} to a house",
                         "put {kidName} into a house",
                         "assign house to {kidName}"
                     ]

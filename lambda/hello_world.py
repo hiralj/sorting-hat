@@ -28,7 +28,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Welcome, you can say Hello or Help. Which would you like to try?"
+        speak_output = random.choice(helper.launch_utterances)
 
         return (
             handler_input.response_builder
@@ -61,7 +61,6 @@ class HouseIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("HouseIntent")(handler_input)
 
     def handle(self, handler_input):
-        house = random.choice(helper.houses)
         slots = handler_input.request_envelope.request.intent.slots
         name_slot = slots.get("kidName")
 
@@ -70,10 +69,14 @@ class HouseIntentHandler(AbstractRequestHandler):
         else:
             kid_name = "our young wizard"
 
+        if helper.hack_kid(kid_name):
+            house = 'Gryffindor'
+        else:
+            house = random.choice(helper.houses)
         ssml_speech = (
             "<speak>"
-            "Hmm... let me think..."
-            f"{kid_name} goes to {house}"
+            f"{helper.get_assign_thinking(kid_name)}"
+            f"{helper.assign_house_response(kid_name, house)}"
             "</speak>"
         )
 
@@ -93,7 +96,7 @@ class HelpIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "You can say hello to me! How can I help?"
+        speak_output = "You can say something like 'assign hermoine to a house'"
 
         return (
             handler_input.response_builder
@@ -112,7 +115,7 @@ class CancelOrStopIntentHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Goodbye!"
+        speak_output = "Thank you for using birthday sorting game. Goodbye!"
 
         return (
             handler_input.response_builder
