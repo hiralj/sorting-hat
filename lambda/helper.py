@@ -18,11 +18,11 @@ birthday_kid_thinking = "I am so excited to assign a Hogwarts house to our birth
 
 def hack_kid(kid_name):
     kid_name = kid_name.lower()
-    return birthday_kid(kid_name) or kid_name == 'misha' or kid_name == 'misa' or kid_name == 'meesa' or kid_name == 'meesha' or kid_name == 'hermoine' or kid_name == 'ginny' or kid_name == 'harry'
+    return birthday_kid(kid_name) or kid_name == 'misha' or kid_name == 'misa' or kid_name == 'meesa' or kid_name == 'meesha' or kid_name == 'nisha' or kid_name == 'hermoine' or kid_name == 'ginny' or kid_name == 'harry'
 
 def birthday_kid(kid_name):
     kid_name = kid_name.lower()
-    return kid_name == 'panthi' or kid_name == 'panti' or kid_name == 'panthy'
+    return kid_name == 'panthi' or kid_name == 'panti' or kid_name == 'panthy' or kid_name == 'monthly' or kid_name == 'monthy' or kid_name == 'panthee'
 
 def get_assign_thinking(kid_name):
     if birthday_kid(kid_name):
